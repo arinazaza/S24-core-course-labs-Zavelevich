@@ -1,7 +1,12 @@
 [![Python application](https://github.com/arinazaza/S24-core-course-labs-Zavelevich/actions/workflows/app_python.yml/badge.svg)](https://github.com/arinazaza/S24-core-course-labs-Zavelevich/actions/workflows/app_python.yml)
 # Flask Moscow Time Web Application
 
-This is a simple web application built with Flask that displays the current time in Moscow.
+This is a simple web application built with Flask that displays the current time in Moscow. keeps track of the number of times the root endpoint (`/`) has been accessed. The visit count is persisted in a file named `visits.txt`.
+
+### Features
+
+- **Root Endpoint (`/`)**: Displays the current time in Moscow and the number of visits.
+- **Visits Endpoint (`/visits`)**: Displays the total number of visits.
 
 ## Getting Started
 

@@ -7,7 +7,7 @@ COPY ./app_python/ .
 
 EXPOSE 8000 8000
 
-RUN adduser --disabled-password foo
+RUN adduser --disabled-password foo && chmod 777 /app_python/visits.txt
 
 RUN pip install --no-cache-dir -r requirements.txt
 

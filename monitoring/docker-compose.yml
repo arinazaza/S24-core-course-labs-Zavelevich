@@ -17,6 +17,7 @@ services:
     volumes:
       - /var/lib/docker/containers:/var/lib/docker/containers
       - ./promtail.yml:/etc/promtail/config.yml
+      - ./promtail/positions:/var/lib/promtail/positions
     command: -config.file=/etc/promtail/config.yml
     networks:
       - loki
@@ -64,6 +65,8 @@ services:
     image: arinazaza/app_python.py:latest
     ports:
       - "8000:8000"
+    volumes:
+      - ./app_python/visits.txt:/app/visits.txt
     networks:
       - loki
 
